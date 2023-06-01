@@ -1,50 +1,444 @@
 ---
-import BaseHead from '../components/BaseHead.astro';
-import Header from '../components/Header.astro';
-import Footer from '../components/Footer.astro';
-import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
+import Carousel from "../components/Carousel";
+import BaseLayout from "../layouts/BaseLayout.astro";
 ---
 
-<!DOCTYPE html>
-<html lang="en">
-	<head>
-		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
-	</head>
-	<body>
-		<Header title={SITE_TITLE} />
-		<main>
-			<h1>🧑‍🚀 Hello, Astronaut!</h1>
-			<p>
-				Welcome to the official <a href="https://astro.build/">Astro</a> blog starter template. This
-				template serves as a lightweight, minimally-styled starting point for anyone looking to build
-				a personal website, blog, or portfolio with Astro.
-			</p>
-			<p>
-				This template comes with a few integrations already configured in your
-				<code>astro.config.mjs</code> file. You can customize your setup with
-				<a href="https://astro.build/integrations">Astro Integrations</a> to add tools like Tailwind,
-				React, or Vue to your project.
-			</p>
-			<p>Here are a few ideas on how to get started with the template:</p>
-			<ul>
-				<li>Edit this page in <code>src/pages/index.astro</code></li>
-				<li>Edit the site header items in <code>src/components/Header.astro</code></li>
-				<li>Add your name to the footer in <code>src/components/Footer.astro</code></li>
-				<li>Check out the included blog posts in <code>src/pages/blog/</code></li>
-				<li>Customize the blog post page layout in <code>src/layouts/BlogPost.astro</code></li>
-			</ul>
-			<p>
-				Have fun! If you get stuck, remember to <a href="https://docs.astro.build/"
-					>read the docs
-				</a> or <a href="https://astro.build/chat">join us on Discord</a> to ask questions.
-			</p>
-			<p>
-				Looking for a blog template with a bit more personality? Check out <a
-					href="https://github.com/Charca/astro-blog-template"
-					>astro-blog-template
-				</a> by <a href="https://twitter.com/Charca">Maxi Ferreira</a>.
-			</p>
-		</main>
-		<Footer />
-	</body>
-</html>
+<BaseLayout title="Home page | Sotrusty Website">
+    <div class="lg:pt-44 xl:pt-56 xl:pb-28 pt-32 pb-20 bg-gradient-1">
+        <div class="u-container">
+            <div
+                class="flex flex-col-reverse lg:flex-row lg:items-center lg:justify-between gap-8"
+            >
+                <div class="lg:w-5/12">
+                    <h1
+                        class="text-white font-bold text-3xl text-center lg:text-left lg:text-4xl xl:text-5xl 2xl:text-6xl"
+                    >
+                        ¡Crea tu tienda en línea en minutos!
+                    </h1>
+                    <ul class="mt-12 space-y-12">
+                        <li class="flex items-center gap-x-2">
+                            <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                viewBox="0 0 24 24"
+                                fill="#E58024"
+                                class="w-8 h-8"
+                            >
+                                <path
+                                    fill-rule="evenodd"
+                                    d="M19.916 4.626a.75.75 0 01.208 1.04l-9 13.5a.75.75 0 01-1.154.114l-6-6a.75.75 0 011.06-1.06l5.353 5.353 8.493-12.739a.75.75 0 011.04-.208z"
+                                    clip-rule="evenodd"></path>
+                            </svg>
+                            <p class="text-white font-bold text-xl xl:text-2xl">
+                                Sin descargar aplicación
+                            </p>
+                        </li>
+                        <li class="flex items-center gap-x-2">
+                            <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                viewBox="0 0 24 24"
+                                fill="#E58024"
+                                class="w-8 h-8"
+                            >
+                                <path
+                                    fill-rule="evenodd"
+                                    d="M19.916 4.626a.75.75 0 01.208 1.04l-9 13.5a.75.75 0 01-1.154.114l-6-6a.75.75 0 011.06-1.06l5.353 5.353 8.493-12.739a.75.75 0 011.04-.208z"
+                                    clip-rule="evenodd"></path>
+                            </svg>
+                            <p class="text-white font-bold text-xl xl:text-2xl">
+                                Sin requerimientos técnicos
+                            </p>
+                        </li>
+                    </ul>
+                    <div class="mt-12 text-center lg:text-left">
+                        <a
+                            class="inline-block py-2 px-8 bg-white text-blue-munsell font-bold text-xl lg:text-2xl rounded hover:text-trangerine duration-300"
+                            href="/"
+                            target="_blank"
+                        >
+                            Empieza ahora
+                        </a>
+                    </div>
+                    <div
+                        class="mt-12 flex items-center justify-center lg:justify-start gap-x-4"
+                    >
+                        <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            viewBox="0 0 24 24"
+                            fill="#E58024"
+                            class="w-8 h-8"
+                        >
+                            <path
+                                fill-rule="evenodd"
+                                d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.007 5.404.433c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.433 2.082-5.006z"
+                                clip-rule="evenodd"></path>
+                        </svg>
+                        <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            viewBox="0 0 24 24"
+                            fill="#E58024"
+                            class="w-8 h-8"
+                        >
+                            <path
+                                fill-rule="evenodd"
+                                d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.007 5.404.433c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.433 2.082-5.006z"
+                                clip-rule="evenodd"></path>
+                        </svg>
+                        <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            viewBox="0 0 24 24"
+                            fill="#E58024"
+                            class="w-8 h-8"
+                        >
+                            <path
+                                fill-rule="evenodd"
+                                d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.007 5.404.433c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.433 2.082-5.006z"
+                                clip-rule="evenodd"></path>
+                        </svg>
+                        <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            viewBox="0 0 24 24"
+                            fill="#E58024"
+                            class="w-8 h-8"
+                        >
+                            <path
+                                fill-rule="evenodd"
+                                d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.007 5.404.433c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.433 2.082-5.006z"
+                                clip-rule="evenodd"></path>
+                        </svg>
+                        <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            viewBox="0 0 24 24"
+                            fill="#E58024"
+                            class="w-8 h-8"
+                        >
+                            <path
+                                fill-rule="evenodd"
+                                d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.007 5.404.433c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.433 2.082-5.006z"
+                                clip-rule="evenodd"></path>
+                        </svg>
+                    </div>
+                    <p
+                        class="mt-6 font-bold text-lg lg:text-xl text-seasalt text-center lg:text-left"
+                    >
+                        El mejor aliado de los emprendedores y PYMES
+                    </p>
+                </div>
+                <div class="lg:w-7/12">
+                    <img
+                        class="mx-auto lg:ml-auto lg:mr-0"
+                        src="/images/apps-store.webp"
+                        alt="apps store"
+                    />
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="pt-20 pb-10 lg:py-0 overflow-hidden">
+        <div class="u-container">
+            <div
+                class="-mt-8 lg:-mt-12 xl:-mt-16 flex flex-col-reverse lg:flex-row lg:justify-center lg:items-center"
+            >
+                <div class="lg:w-1/2">
+                    <video
+                        class="w-1/2 lg:w-full mx-auto lg:mx-0"
+                        src="https://video.wixstatic.com/video/68b7af_892596db5c5243848ebefc140d24ba56/1080p/mp4/file.mp4"
+                        autoplay
+                        muted
+                        loop></video>
+                </div>
+                <div class="lg:w-1/2">
+                    <h2
+                        class="text-3xl lg:text-4xl 2xl:text-5xl font-bold text-blue-munsell text-center lg:text-left"
+                    >
+                        SoTrusty se adapta a todo tipo de negocio local
+                    </h2>
+                    <h3
+                        class="mt-8 font-bold text-lg text-center lg:text-left md:text-xl lg:text-2xl xl:text-3xl text-black text-opacity-50"
+                    >
+                        Puedes tener una moderna tienda online sin tarifas
+                        mensuales o altas comisiones
+                    </h3>
+                </div>
+            </div>
+            <div
+                class="lg:-mt-64 xl:-mt-80 2xl:-mt-96 flex flex-col-reverse lg:flex-row-reverse lg:justify-center lg:items-center"
+            >
+                <div class="lg:w-1/2">
+                    <video
+                        class="w-1/2 lg:w-full mx-auto lg:mx-0"
+                        src="https://video.wixstatic.com/video/68b7af_a0efad12ce3240b3a680a2bb3bec5f72/1080p/mp4/file.mp4"
+                        autoplay
+                        muted
+                        loop></video>
+                    <h3
+                        class="lg:hidden -mt-2 text-xl lg:text-2xl 2xl:text-3xl font-bold text-trangerine text-center lg:text-left"
+                    >
+                        ¡Ahora sin costo fijo!
+                    </h3>
+                    <div class="text-center lg:text-left mt-8 lg:hidden">
+                        <a
+                            href="/"
+                            target="_blank"
+                            class="inline-block bg-blue-munsell text-white py-2 px-8 rounded font-bold hover:bg-trangerine duration-300"
+                        >
+                            Registrate aquí
+                        </a>
+                    </div>
+                </div>
+                <div class="lg:w-1/2">
+                    <h3
+                        class="font-bold text-lg text-center lg:text-left md:text-xl lg:text-2xl xl:text-3xl text-black text-opacity-50"
+                    >
+                        Puedes construir tu propia app a tu gusto, ofrecemos
+                        muchas plantillas
+                    </h3>
+                    <h3
+                        class="hidden lg:block mt-8 text-xl lg:text-2xl 2xl:text-3xl font-bold text-trangerine text-center lg:text-left"
+                    >
+                        ¡Ahora sin costo fijo!
+                    </h3>
+                    <div class="hidden lg:block text-center lg:text-left mt-8">
+                        <a
+                            href="/"
+                            target="_blank"
+                            class="inline-block bg-blue-munsell text-white py-2 px-8 rounded font-bold hover:bg-trangerine duration-300"
+                        >
+                            Registrate aquí
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="bg-seasalt py-12 lg:py-16 xl:py-20">
+        <div class="u-container">
+            <div class="text-center max-w-xl mx-auto">
+                <h2 class="text-2xl lg:text-3xl font-bold text-blue-munsell">
+                    Es tiempo de mostrar tus ofertas con una moderna tienda
+                    online
+                </h2>
+            </div>
+            <Carousel
+                data={[
+                    {
+                        link: "/",
+                        pathImage:
+                            "https://static.wixstatic.com/media/68b7af_fdaae3e4842d4e20bc92c841b58c264c~mv2.png/v1/fill/w_368,h_368,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/68b7af_fdaae3e4842d4e20bc92c841b58c264c~mv2.png",
+                    },
+                    {
+                        link: "/",
+                        pathImage:
+                            "https://static.wixstatic.com/media/68b7af_af085c428ec942c3874dc948c184cbfd~mv2.png/v1/fill/w_368,h_368,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/68b7af_af085c428ec942c3874dc948c184cbfd~mv2.png",
+                    },
+                    {
+                        link: "/",
+                        pathImage:
+                            "https://static.wixstatic.com/media/68b7af_8b84dcba991d40faa26c4da0c9efccbf~mv2.png/v1/fill/w_368,h_368,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/68b7af_8b84dcba991d40faa26c4da0c9efccbf~mv2.png",
+                    },
+                    {
+                        link: "/",
+                        pathImage:
+                            "https://static.wixstatic.com/media/68b7af_dd94840bb7a94a489e62eb96c3b6bdec~mv2.png/v1/fill/w_368,h_368,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/68b7af_dd94840bb7a94a489e62eb96c3b6bdec~mv2.png",
+                    },
+                    {
+                        link: "/",
+                        pathImage:
+                            "https://static.wixstatic.com/media/68b7af_b84551e718a94ea38add26ebaba15be8~mv2.png/v1/fill/w_368,h_368,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/68b7af_b84551e718a94ea38add26ebaba15be8~mv2.png",
+                    },
+                    {
+                        link: "/",
+                        pathImage:
+                            "https://static.wixstatic.com/media/68b7af_a52754f22c294848a5ba023e3037cc10~mv2.png/v1/fill/w_368,h_368,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/68b7af_a52754f22c294848a5ba023e3037cc10~mv2.png",
+                    },
+                    {
+                        link: "/",
+                        pathImage:
+                            "https://static.wixstatic.com/media/68b7af_ee0cda8efc3342428dffad491127e43a~mv2.png/v1/fill/w_368,h_368,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/68b7af_ee0cda8efc3342428dffad491127e43a~mv2.png",
+                    },
+                    {
+                        link: "/",
+                        pathImage:
+                            "https://static.wixstatic.com/media/68b7af_b6c670b162f44a129059bb4d9772852f~mv2.png/v1/fill/w_368,h_368,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/68b7af_b6c670b162f44a129059bb4d9772852f~mv2.png",
+                    },
+                ]}
+                client:load
+            />
+            <div class="text-center mt-8">
+                <a
+                    href="/"
+                    target="_blank"
+                    class="mt-6 inline-block bg-blue-munsell text-white py-2 px-8 rounded font-bold hover:bg-trangerine duration-300"
+                >
+                    Empieza sin costo
+                </a>
+            </div>
+        </div>
+    </div>
+    <div class="py-12 lg:py-16 xl:py-20">
+        <div class="u-container">
+            <div class="text-center">
+                <h2
+                    class="text-xl lg:text-2xl 2xl:text-3xl font-bold text-trangerine"
+                >
+                    SoTrusty hace que vender en línea sea más fácil que nunca
+                </h2>
+                <div class="max-w-2xl mx-auto mt-3">
+                    <p
+                        class="font-bold xl:text-lg 2xl:text-xl text-black text-opacity-50"
+                    >
+                        Automatizar tus ventas online te ahorra tiempo que
+                        podrás dedicar a dar un mejor servicio para sus
+                        clientes.
+                    </p>
+                </div>
+            </div>
+            <div class="mt-12">
+                <div class="flex flex-col gap-8 lg:gap-x-16 lg:flex-row">
+                    <div class="lg:w-1/3">
+                        <img
+                            class="mx-auto"
+                            src="/images/transfer_money.webp"
+                            alt="transfer money image"
+                        />
+                        <div class="text-center">
+                            <h2
+                                class="text-lg lg:text-xl font-bold text-blue-munsell"
+                            >
+                                Agiliza la venta online
+                            </h2>
+                            <p class="font-bold text-black text-opacity-50">
+                                generando más ventas y margen ganancia
+                            </p>
+                        </div>
+                    </div>
+                    <div class="lg:w-1/3">
+                        <img
+                            class="mx-auto"
+                            src="/images/time-reduce.webp"
+                            alt="time reduce image"
+                        />
+                        <div class="text-center">
+                            <h2
+                                class="text-lg lg:text-xl font-bold text-blue-munsell"
+                            >
+                                Reduce tiempo
+                            </h2>
+                            <p class="font-bold text-black text-opacity-50">
+                                para ocuparse de las cosas más importantes
+                            </p>
+                        </div>
+                    </div>
+                    <div class="lg:w-1/3">
+                        <img
+                            class="mx-auto"
+                            src="/images/coolness.webp"
+                            alt="coolness image"
+                        />
+                        <div class="text-center">
+                            <h2
+                                class="text-lg lg:text-xl font-bold text-blue-munsell"
+                            >
+                                Moderniza tu marca
+                            </h2>
+                            <p class="font-bold text-black text-opacity-50">
+                                genera más clientes leales y recurrentes
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="py-12 lg:py-16 xl:py-20 bg-seasalt">
+        <div class="u-container">
+            <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-12 gap-8 xl:gap-y-8 xl:gap-x-0">
+                <div
+                    class="order-2 xl:order-1 xl:col-start-1 xl:col-end-4 xl:row-start-1 xl:row-end-2 h-full"
+                >
+                    <div
+                        class="shadow p-8 rounded-2xl overflow-hidden bg-white text-center space-y-4 h-full"
+                    >
+                        <h3
+                            class="text-trangerine text-2xl lg:text-3xl font-bold"
+                        >
+                            Tienda interactiva
+                        </h3>
+                        <p
+                            class="text-black text-opacity-50 text-lg lg:text-xl font-bold"
+                        >
+                            Muestra tu oferta con videos y fotos. Fácil de crear
+                            desde cualquier dispositivo
+                        </p>
+                    </div>
+                </div>
+                <div
+                    class="order-1 xl:order-2 md:col-start-1 md:col-end-3 xl:col-start-4 xl:col-end-10 xl:row-start-1 xl:row-end-3"
+                >
+                    <img
+                        class="mx-auto"
+                        src="/images/app-store-2.webp"
+                        alt="app store 2"
+                    />
+                </div>
+                <div
+                    class="order-3 xl:col-start-10 xl:col-end-13 xl:row-start-1 xl:row-end-2 h-full"
+                >
+                    <div
+                        class="shadow p-8 rounded-2xl overflow-hidden bg-white text-center space-y-4 h-full"
+                    >
+                        <h3
+                            class="text-blue-munsell text-2xl lg:text-3xl font-bold"
+                        >
+                            Pagos online
+                        </h3>
+                        <p
+                            class="text-black text-opacity-50 text-lg lg:text-xl font-bold"
+                        >
+                            Ofrezca modernos métodos de pago. No te pierdas
+                            ninguna venta: Apple Pay, Google Pay, tarjetas de
+                            crédito y efectivo
+                        </p>
+                    </div>
+                </div>
+                <div
+                    class="order-4 xl:col-start-1 xl:col-end-4 xl:row-start-2 xl:row-end-3 h-full"
+                >
+                    <div
+                        class="shadow p-8 rounded-2xl overflow-hidden bg-white text-center space-y-4 h-full"
+                    >
+                        <h3
+                            class="text-blue-munsell text-2xl lg:text-3xl font-bold"
+                        >
+                            Sistema de pedidos en línea
+                        </h3>
+                        <p
+                            class="text-black text-opacity-50 text-lg lg:text-xl font-bold"
+                        >
+                            El sistema completo para recibir y administrar tus
+                            pedidos y pagos
+                        </p>
+                    </div>
+                </div>
+                <div
+                    class="order-5 xl:col-start-10 xl:col-end-13 xl:row-start-2 xl:row-end-3 h-full"
+                >
+                    <div
+                        class="shadow p-8 rounded-2xl overflow-hidden bg-white text-center space-y-4 h-full"
+                    >
+                        <h3
+                            class="text-trangerine text-2xl lg:text-3xl font-bold"
+                        >
+                            Video historias
+                        </h3>
+                        <p
+                            class="text-black text-opacity-50 text-lg lg:text-xl font-bold"
+                        >
+                            Las web stories son una forma nueva y moderna de
+                            llegar a nuevos clientes con contenido de video
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</BaseLayout>
