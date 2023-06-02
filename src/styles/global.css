@@ -20,4 +20,12 @@
     .u-container {
         @apply mx-auto w-11/12 lg:w-10/12 max-w-screen-xl;
     }
+
+    .u-heading-primary {}
+
+    .u-heading-secondary {}
+
+    .u-heading-tertiary {}
+
+    .u-paragraph {}
 }
